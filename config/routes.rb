@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'blog#home'
   get 'about', to: 'blog#about'
   #resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
-  # above is same as below
+  # above is same as below, exposes all routes
   resources :articles
 end
