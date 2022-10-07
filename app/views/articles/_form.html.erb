@@ -1,17 +1,27 @@
 <%= form_with(model: @article, local: true) do |f| %>
-
-    <p>
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
-    </p>
     
-    <p>
-        <%= f.label :description %><br/>
-        <%= f.text_area :description %>
-    </p>
+    <div class="form-group row my-3">
+        <%= f.label :title, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_field :title, class: "form-control" %>
+        </div>
+        
+    </div>
     
-    <p>
-        <%= f.submit %>
-    </p>
+    <div class="form-group row">
+        <%= f.label :description, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_area :description, rows: 10, class: "form-control" %>
+        </div>
+    </div>
+    
+    <div class="form-group row justify-content-center">
+        <%= f.submit class: "btn btn-primary my-3 w-25" %>
+    </div>
 
 <% end %>
+
+<div class="text-center">
+    <%= link_to '[Cancel and return to Articles Listing]', articles_path, class: "text-black" %>
+</div>
+
