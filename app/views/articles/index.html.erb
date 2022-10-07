@@ -8,7 +8,7 @@
     <% @articles.reverse.each do |article| %>
         <div class="card text-center my-4">
           <div class="card-header">
-            Written by: Andrew
+            Written by: <%= article.user.username %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
