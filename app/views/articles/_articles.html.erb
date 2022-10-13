@@ -2,7 +2,7 @@
     <% @articles.reverse.each do |article| %>
         <div class="card text-center my-4">
           <div class="card-header">
-            Written by: <%= article.user.username %>
+            Written by: <%= link_to article.user.username, article.user %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>

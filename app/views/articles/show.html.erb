@@ -3,7 +3,8 @@
 <div class="container w-50">
     <div class="card text-center my-4">
       <div class="card-header">
-        Written by: <%= @article.user.username %>
+        <%= link_to gravatar_for(@article.user, size: 50), @article.user %>
+        <p class="mt-2">Written by: <%= @article.user.username %></p>
       </div>
       <div class="card-body">
         <h5 class="card-title"><%= @article.title %></h5>
