@@ -1,7 +1,11 @@
 <h1 class="text-center my-4">Articles Listing Page</h1>
 
-<div class="text-center">
-    <%= link_to 'Write a new article', new_article_path, class: "btn btn-primary" %>
+<div class="flickr_pagination mt-4">
+    <%= will_paginate @article, :container => false %>
 </div>
 
 <%= render 'articles' %>
+
+<div class="flickr_pagination">
+    <%= will_paginate @article, :container => false %>
+</div>

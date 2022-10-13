@@ -1,5 +1,9 @@
 <h1 class="text-center my-4">Bloggers</h1>
 
+<div class="flickr_pagination mt-4">
+    <%= will_paginate @users, :container => false %>
+</div>
+
 <div class="container w-50">
     <% @users.reverse.each do |user| %>
         <div class="card text-center my-4">
@@ -20,4 +24,8 @@
           </div>
         </div>
     <% end %>
+</div>
+
+<div class="flickr_pagination m-4">
+    <%= will_paginate @users, :container => false %>
 </div>
