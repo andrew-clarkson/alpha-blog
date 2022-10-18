@@ -1,0 +1,35 @@
+<div class="container">
+    
+    <h1 class="text-center my-4">Log In</h1>
+    
+
+    
+<%= form_with(scope: :session, url:login_path, local: true) do |f| %>
+
+    <div class="form-group row my-3">
+        <%= f.label :email, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.email_field :email, class: "form-control" %>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <%= f.label :password, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.password_field :password, class: "form-control" %>
+        </div>
+    </div>
+    
+    <div class="form-group row justify-content-center">
+        <%= f.submit "Log In", class: "btn btn-primary my-3 w-25" %>
+    </div>
+
+<% end %>
+
+<div class="text-center">
+    <%= link_to '[Cancel and return to Articles Listing]', articles_path, class: "text-black" %>
+</div>
+
+
+    
+</div>
